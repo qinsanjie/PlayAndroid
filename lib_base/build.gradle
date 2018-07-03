@@ -114,6 +114,8 @@ dependencies {
     api rootProject.ext.dependencies["filedownloader"]
     api rootProject.ext.dependencies["constraint"]
 
+    api 'me.jessyan:arms:2.4.1'
+
     // DB
 //    api rootProject.ext.dependencies["roomRuntime"]
 //    annotationProcessor rootProject.ext.dependencies["roomCompiler"]
