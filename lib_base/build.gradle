@@ -115,7 +115,8 @@ dependencies {
     api rootProject.ext.dependencies["constraint"]
 
     api 'me.jessyan:arms:2.4.1'
-
+    implementation rootProject.ext.dependencies["fragmentation"]
+    implementation rootProject.ext.dependencies["fragmentation-core"]
     // DB
 //    api rootProject.ext.dependencies["roomRuntime"]
 //    annotationProcessor rootProject.ext.dependencies["roomCompiler"]
