@@ -6,6 +6,7 @@ package com.qinsanjie.playandroid.http;
  * @desc
  */
 
-public class Api {
-    public static final String APP_DOMAIN = "";
+public interface Api {
+    String APP_DOMAIN = "https://api.github.com";
+    String RequestSuccess = "0";
 }
