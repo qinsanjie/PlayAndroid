@@ -4,6 +4,11 @@ android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
@@ -75,6 +80,7 @@ dependencies {
         exclude module: 'okio'
     }
     api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["httplog"]
 
     // Image
     api(rootProject.ext.dependencies["glide"]) {
@@ -115,8 +121,8 @@ dependencies {
     api rootProject.ext.dependencies["constraint"]
 
     api 'me.jessyan:arms:2.4.1'
-    implementation rootProject.ext.dependencies["fragmentation"]
-    implementation rootProject.ext.dependencies["fragmentation-core"]
+    api rootProject.ext.dependencies["fragmentation"]
+    api rootProject.ext.dependencies["fragmentation-core"]
     // DB
 //    api rootProject.ext.dependencies["roomRuntime"]
 //    annotationProcessor rootProject.ext.dependencies["roomCompiler"]
