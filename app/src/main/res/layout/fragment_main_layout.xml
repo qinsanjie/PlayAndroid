@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:background="#ffffff"
+        tl:layout_constraintBottom_toBottomOf="parent"
+        tl:layout_constraintLeft_toLeftOf="parent"
+        tl:layout_constraintRight_toRightOf="parent"
+        tl:tl_iconHeight="23dp"
+        tl:tl_iconWidth="23dp"
+        tl:tl_indicator_color="#2C97DE"
+        tl:tl_indicator_height="0dp"
+        tl:tl_textSelectColor="#2C97DE"
+        tl:tl_textUnselectColor="#66000000"
+        tl:tl_textsize="12sp"
+        tl:tl_underline_color="#DDDDDD"
+        tl:tl_underline_height="1dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tl:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        tl:layout_constraintLeft_toLeftOf="parent"
+        tl:layout_constraintRight_toRightOf="parent"
+        tl:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

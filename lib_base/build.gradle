@@ -129,4 +129,6 @@ dependencies {
 
     // Log
 //    api rootProject.ext.dependencies["logg"]
+    api rootProject.ext.dependencies["android_util_code"]
+    api rootProject.ext.dependencies["tab_layout"]
 }

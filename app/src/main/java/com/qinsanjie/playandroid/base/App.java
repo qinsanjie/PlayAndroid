@@ -2,6 +2,7 @@ package com.qinsanjie.playandroid.base;
 
 import android.content.Context;
 
+import com.blankj.utilcode.util.Utils;
 import com.jess.arms.base.BaseApplication;
 
 /**
@@ -21,6 +22,5 @@ public class App extends BaseApplication{
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         mContext = this;
-
     }
 }

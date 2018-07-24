@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
+import com.blankj.utilcode.util.Utils;
 import com.jess.arms.base.delegate.AppLifecycles;
 import com.jess.arms.di.module.GlobalConfigModule;
 import com.jess.arms.http.log.RequestInterceptor;
@@ -61,6 +62,8 @@ public final class GlobalConfiguration implements ConfigModule {
         if (!BuildConfig.LOG_DEBUG) { //Release 时,让框架不再打印 Http 请求和响应的信息
             builder.printHttpLogLevel(RequestInterceptor.Level.NONE);
         }
+        //工具类初始化
+        Utils.init(context);
         Timber.e("applyOptions");
         //使用builder可以为框架配置一些配置信息
         builder.baseurl(Api.APP_DOMAIN)
