@@ -6,10 +6,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.jess.arms.di.component.AppComponent;
 import com.qinsanjie.playandroid.R;
 import com.qinsanjie.playandroid.base.ui.BaseFragment;
+
+import butterknife.BindView;
 
 /**
  * @author qinsanjie
@@ -17,7 +20,9 @@ import com.qinsanjie.playandroid.base.ui.BaseFragment;
  * @desc
  */
 
-public class SplashFragment extends BaseFragment {
+public class IntroduceAppFragment extends BaseFragment {
+    @BindView(R.id.iv_introduce)
+    ImageView mIvIntroduce;
 
     @Override
     public void setupFragmentComponent(@NonNull AppComponent appComponent) {
@@ -32,7 +37,8 @@ public class SplashFragment extends BaseFragment {
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-
+        int res = getArguments().getInt("background");
+        mIvIntroduce.setBackgroundResource(res);
     }
 
     @Override
@@ -40,9 +46,10 @@ public class SplashFragment extends BaseFragment {
 
     }
 
-    public static BaseFragment newInstance() {
+    public static BaseFragment newInstance(int res) {
         Bundle args = new Bundle();
-        MainFragment fragment = new MainFragment();
+        IntroduceAppFragment fragment = new IntroduceAppFragment();
+        args.putInt("background", res);
         fragment.setArguments(args);
         return fragment;
     }
