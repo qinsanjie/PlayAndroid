@@ -2,14 +2,19 @@ package com.yxcx.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 
 import com.jess.arms.base.BaseFragment;
 import com.jess.arms.mvp.IPresenter;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import me.yokeyword.fragmentation.ExtraTransaction;
 import me.yokeyword.fragmentation.ISupportFragment;
 import me.yokeyword.fragmentation.SupportFragmentDelegate;
@@ -24,6 +29,24 @@ public abstract class BaseSupportFragment<P extends IPresenter> extends BaseFrag
 
     final SupportFragmentDelegate mDelegate = new SupportFragmentDelegate(this);
     protected FragmentActivity _mActivity;
+    Unbinder bind;
+    @Override
+    public View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(getLayoutId(), container, false);
+        bind = ButterKnife.bind(this, view);
+        initView();
+        return view;
+    }
+
+    @Override
+    public void onDetach() {
+        bind.unbind();
+        super.onDetach();
+    }
+
+    public abstract void initView();
+
+    public abstract int getLayoutId();
 
     @Override
     public SupportFragmentDelegate getSupportDelegate() {

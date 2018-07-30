@@ -23,5 +23,5 @@ public class PreferenceKeys {
      * 上一个展示引导页的版本
      */
     public static final String LAST_SHOW_INTRODUCE_VERSION = KEY_SCHEME + "last_show_introduce_version";
-    ;
+
 }

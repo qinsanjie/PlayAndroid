@@ -22,11 +22,18 @@
         tl:tl_underline_color="#DDDDDD"
         tl:tl_underline_height="1dp" />
 
+    <View
+        android:id="@+id/main_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_1"
+        android:background="@color/yxcx_color_EEEEEE"
+        tl:layout_constraintBottom_toTopOf="@+id/bottom_bar" />
+
     <FrameLayout
         android:id="@+id/fl_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tl:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        tl:layout_constraintBottom_toTopOf="@+id/main_divider"
         tl:layout_constraintLeft_toLeftOf="parent"
         tl:layout_constraintRight_toRightOf="parent"
         tl:layout_constraintTop_toTopOf="parent">
