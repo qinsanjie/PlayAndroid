@@ -24,7 +24,13 @@ ext {
             espressoSdkVersion      : "3.0.1",
             canarySdkVersion        : "1.5.4",
             constraint              : "1.0.2",
-            fragmentationVersion    : "1.1.6"
+            fragmentationVersion    : "1.1.6",
+            ucropVersionCode        : 22,
+            ucropVersionName        : "2.2.0-native",
+            rxjava                  : "2.1.12",
+            rxandroid               : "2.0.2",
+            selectVersionCode       : 1,
+            selectVersionName       : "1.0.0"
     ]
 
     dependencies = [
@@ -73,8 +79,8 @@ ext {
             "rxerrorhandler"           : "me.jessyan:rxerrorhandler:1.0.1",
 
             //rx2
-            "rxandroid2"               : "io.reactivex.rxjava2:rxandroid:2.0.2",
-            "rxjava2"                  : "io.reactivex.rxjava2:rxjava:2.1.12",
+            "rxandroid2"               : "io.reactivex.rxjava2:rxandroid:${version[ "rxandroid"]}",
+            "rxjava2"                  : "io.reactivex.rxjava2:rxjava:${version["rxjava"]}",
             "rxlifecycle2"             : "com.trello.rxlifecycle2:rxlifecycle:${version["rxlifecycle2SdkVersion"]}",
             "rxlifecycle2-android"     : "com.trello.rxlifecycle2:rxlifecycle-android:${version["rxlifecycle2SdkVersion"]}",
             "rxlifecycle2-components"  : "com.trello.rxlifecycle2:rxlifecycle-components:${version["rxlifecycle2SdkVersion"]}",

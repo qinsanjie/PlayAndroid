@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/PlayAndroid.iml" filepath="$PROJECT_DIR$/PlayAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_base/lib_base.iml" filepath="$PROJECT_DIR$/lib_base/lib_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_crop_picture/lib_crop_picture.iml" filepath="$PROJECT_DIR$/lib_crop_picture/lib_crop_picture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_select_picture/lib_select_picture.iml" filepath="$PROJECT_DIR$/lib_select_picture/lib_select_picture.iml" />
     </modules>
   </component>
 </project>

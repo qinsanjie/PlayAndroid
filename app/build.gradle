@@ -170,11 +170,9 @@ dependencies {
     }
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     api rootProject.ext.dependencies["multidex"]
-
     // DB
-//    api rootProject.ext.dependencies["roomRuntime"]
-//    annotationProcessor rootProject.ext.dependencies["roomCompiler"]
-
+    //    api rootProject.ext.dependencies["roomRuntime"]
+    //    annotationProcessor rootProject.ext.dependencies["roomCompiler"]
     // Test
     testImplementation rootProject.ext.dependencies["junit"]
     debugImplementation rootProject.ext.dependencies["canary-debug"]
@@ -182,4 +180,5 @@ dependencies {
     testImplementation rootProject.ext.dependencies["canary-release"]
     //引入基本库
     implementation project(':lib_base')
+    implementation project(':lib_select_picture')
 }
